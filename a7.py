@@ -102,6 +102,9 @@ class BayesClassifier:
             neg_prob += math.log((neg_count + 1) / neg_denominator)
 
         # return whichever class had the higher (less negative) probability
+        print(f"Positive Probability: {pos_prob}")
+        print(f"Negative Probability: {neg_prob}")
+
         if pos_prob > neg_prob:
             return "positive"
         else:
@@ -240,3 +243,14 @@ if __name__ == "__main__":
     print("\nThe following should all be negative.")
     print(b.classify('rainy days are the worst'))
     print(b.classify('computer science is terrible'))
+    print(b.classify("Summer break is almost here. I am super excited and I know that it s going to be the best"))
+    print(b.classify("I am so freaking pumped for this weekend, I can not tell you how excited I am."))
+    print(b.classify("This winter is going to be so much fun, I am going skiing, sledding, and ice skating!"))
+    print(b.classify("I am nervous that I won t do well on the AP tests. I have studied, but I don t think I ll do that well"))
+    print(b.classify("This test is going to be hard, I prepared for it, but I still think it will go poorly."))
+    print(b.classify("My dog died.")) 
+    print(b.classify("This phone is absolutely amazing, the camera quality is stunning and it runs so fast!"))
+    print(b.classify("Just watched the new movie, it is a heartwarming masterpiece that left me smiling the whole time."))
+    print(b.classify("I bought this blender and it broke on the first use, total waste of money and very cheap material."))
+    print(b.classify("The acting in this film was wooden, the plot was boring, and I walked out halfway through."))
+
